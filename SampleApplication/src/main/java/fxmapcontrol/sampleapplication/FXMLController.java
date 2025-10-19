@@ -56,6 +56,9 @@ public class FXMLController implements Initializable {
     private ComboBox projectionComboBox;
 
     @FXML
+    private CheckBox graticuleCheckBox;
+
+    @FXML
     private void handlePressed(MouseEvent event) {
         if (event.getTarget() == map && event.getClickCount() == 2) {
             map.setTargetCenter(map.viewToLocation(new Point2D(event.getX(), event.getY())));
@@ -64,6 +67,7 @@ public class FXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        mapGraticule.visibleProperty().bind(graticuleCheckBox.selectedProperty());
 
 //        GeoToolsProjection wgs84zone32N = new GeoToolsProjection();
 //        wgs84zone32N.setWKT("PROJCS[\"WGS 84 / UTM zone 32N\","
