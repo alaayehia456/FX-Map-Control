@@ -29,3 +29,4 @@ Please take a look at the SampleApplication project to learn more.
 ---
 
 The project is not open for contributions. Pull requests will not be accepted.
+"# javafx-map-graticule-check-box" 
